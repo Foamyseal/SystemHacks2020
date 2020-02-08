@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
     <head> 
         <meta charset ="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,20 +9,35 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     </head>
 
-<body>
-<div class="jumbotron">
-    <h1>Select School</h1>
-</div>
+    <body>
 
-<label for="school">Select your School</label> <br>
+    <div id= "uni-title" class = "jumbotron">
+        <h1>The University of Chubb</h1>
+    </div>
 
-<select id="school">
-  <option value=""></option>
-  <option value="uoc">University of Chubb</option>
-  <option value="tsu">Tuna Sandwhich University</option>
-  <option value="egc">Egg Salad College</option>
-</select> <br><br>
-<input type="submit" value="Go">
+    <div class = "container">
+        <form>
+            Login Name: <br>
+            <input type="text" name="loginname"> <br>
 
-</body>
+            Password: <br>
+            <input type="password" name="password"> <br><br>
+		</form>
+		
+		<form action = "./request.html">
+            <input type="submit" value="Login">
+		</form>
+
+
+    </div>
+    </body>
+
+
+
+
 </html>
+
+
+
+
+
