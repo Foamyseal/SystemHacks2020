@@ -5,9 +5,9 @@ function requestPass(){
   //var renewed = nick got it
 
   var xmlHttp = new XMLHttpRequest();
-  var schoolUrl = "insert url here";
-  var loginUrl = "insert url here";
-  var renewUrl = "insert url here";
+  var schoolUrl = "./HTML/mainpage.html";
+  var loginUrl = "./HTML/chubblogin.html";
+  var renewUrl = "./HTML/request.html";
 
   xmlHttp.open( "GET", schoolUrl, false ); // false for synchronous request
   xmlHttp.send( null );
