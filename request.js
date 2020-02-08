@@ -11,7 +11,6 @@ function requestPass(){
 
   xmlHttp.open( "GET", schoolUrl, false ); // false for synchronous request
   xmlHttp.send( null );
-  return xmlHttp.responseText;
 
   document.getElementById('dropdown').value = userSchool;
   //press button
