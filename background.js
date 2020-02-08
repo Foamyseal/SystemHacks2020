@@ -1,35 +1,53 @@
 //background JS
 
-//chrome.tabs.onCreated.addListener(function callback);
+//on new tab open run check
 
-var d = new Date();
-var day = 17;
+chrome.storage.local.set({ "renewed": false }, function(){
+    //  Data's been saved boys and girls, go on home
+});
 
-var r = chrome.storage.local.get(/* String or Array */["renewed"], function(items){
-    //  items = [ { "phasersTo": "awesome" } ]
-    r = items.renewed;
+chrome.runtime.onInstalled.addListener(function() {
+  chrome.contextMenus.create({
+    "id": "sampleContextMenu",
+    "title": "Sample Context Menu",
+    "contexts": ["selection"]
+  });
+
+  //initialize renewed to false on extension installation
+  chrome.storage.local.set({ "renewed": false }, function(){
+  });
+});
+
+chrome.tabs.onCreated.addListener(function() {
+
+  var d = new Date();
+  var day = d.getDate();
+
+  check(day);
 
 });
 
 function check(day_today)  {
 
-  if(day_today >= 16 && r == false){
-    alert("yeet");
+  chrome.storage.local.get(["renewed"], function(items){
+      var r_info = items.renewed;
 
-    chrome.storage.local.set({ "renewed": true }, function(){
-        //  Data's been saved boys and girls, go on home
-    });
+      if(day_today >= 16 && r_info == false){
+        alert("yeet");
 
-  }else if(day_today < 16){
-    alert("yote");
+        //do stuff
 
-    chrome.storage.local.set({ "renewed": false }, function(){
-        //  Data's been saved boys and girls, go on home
-    });
+        chrome.storage.local.set({ "renewed": true }, function(){
+        });
 
-  }
+      }else if(day_today < 16 && r_info == true){
+        alert("yote");
+
+        //do stuff
+
+        chrome.storage.local.set({ "renewed": false }, function(){
+        });
+
+      }
+  });
 }
-
-chrome.storage.local.set({ "renewed": false }, function(){
-    //  Data's been saved boys and girls, go on home
-});
