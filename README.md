@@ -1,12 +1,9 @@
 # SystemHacks2020
 
+Auto - Renew UPASS 
 
-## Project made for SystemHacks 2020
+Proof of Concept
 
+Project made for SystemHacks 2020
 
-
-
-
-
-
-### Created by Martin Au-yeung, Dexter Bigueta, Nick Chubb & Alvin David 
+Created by Martin Au-yeung, Dexter Bigueta, Nick Chubb & Alvin David 
