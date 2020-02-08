@@ -1,4 +1,8 @@
 /* CSS Code Here */
-#uni-title {
-background-color: aqua;
+.jumbotron {
+background-color: crimson;
 }
+
+.container { text-align: center;}
+
+.selectSchool { text-align: center;}
