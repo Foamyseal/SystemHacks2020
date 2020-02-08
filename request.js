@@ -1,37 +1,32 @@
-function selectSchool(){
-    var userSchool = "Simon Fraser University";
-    document.getElementById('dropdown').value = userSchool; //insert specific school here and specific dropdown option
-
-    //continue button
-    //wait until next page
-}
-
-function loginText(){
+function requestPass(){
+  var userSchool = "Simon Fraser University";
   var id = "nickchubb";
   var password = "insertpasswordhere";
+  //var renewed = nick got it
+
+  var xmlHttp = new XMLHttpRequest();
+  var schoolUrl = "insert url here";
+  var loginUrl = "insert url here";
+  var renewUrl = "insert url here";
+
+  xmlHttp.open( "GET", schoolUrl, false ); // false for synchronous request
+  xmlHttp.send( null );
+  return xmlHttp.responseText;
+
+  document.getElementById('dropdown').value = userSchool;
+  //press button
+  //goto next http
+
   document.getElementById('usernameField').value = id;
   document.getElementById('passwordField').value = password;
 
   //check if login is correct
   //if fail, ask for new username password
 
-  //continue button
-  //wait until next page
-}
+  //press continue button
+  //goto next http
 
-function checkBox(){
-  var currentDay = new Date();
-  var day = currentDay.getDate();
-  var renewed = false; //keep this in one function so that we don't have to run through all the checks
-  //par example, return if renewed = true
-
-  if(day >= 16 && !renewed){
-    document.getElementById('checkBox').value = true;
-    renewed = true;
-  }
-  else if(day < 16){
-    renewed = false; //put this when we open a new tab
-  }
+  document.getElementById('checkBox').value = true;
 
   //wait until request finish
   //close connection (if needed?)
