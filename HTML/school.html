@@ -7,7 +7,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <script src="../assets/js /select.js"></script>
 		
 		<title> School Select </title>
     </head>
@@ -20,15 +21,14 @@
 <div class = "selectSchool">
 <label for="school">Select your School</label> <br>
 
-	<select id="school">
+	<select onchange="getValue()" id="school">
 	  <option value=""></option>
-	  <option value="uoc">University of Chubb</option>
+	  <option value="uoc"> University of Chubb</option>
 	  <option value="tsu">Tuna Sandwhich University</option>
 	  <option value="egc">Egg Salad College</option>
 	</select> <br><br>
-<form action = "./login/chubb.html">
-	<input type="submit" value="Go">
+<button onclick = "redirect()"> Go </button>
 </form>
-</div>
+</div>e
 </body>
 </html>

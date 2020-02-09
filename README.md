@@ -1,9 +1,10 @@
-# SystemHacks2020
+# UPass Auto Renew Chrome Extension 
 
-Auto - Renew UPASS 
+A Chrome extension built during LifeHacks 2020 to auto renew Upass built with JavaScript, HTML and CSS. 
 
-Proof of Concept
+ Authors: Martin Au-yeung, Dexter Bigueta, Nick Chubb & Alvin David 
 
-Project made for SystemHacks 2020
+ > Proof of Concept for LifeHacks 2020 
 
-Created by Martin Au-yeung, Dexter Bigueta, Nick Chubb & Alvin David 
+
+
