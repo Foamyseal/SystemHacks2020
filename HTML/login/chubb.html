@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
     <head> 
         <meta charset ="utf-8">
-        <title>Renew UPass</title>
+        <title>Login Screen</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -10,20 +10,28 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../assets/main.css">
 		
-		<title> Request UPass </title>
+		<title> School Login </title>
     </head>
 
-<body>
-<div class="jumbotron">
-    <h1 align = "center"> <b> Renew UPass </b> </h1>
-</div>
+    <body>
 
-<div class="container">
-    <p>Renew UPass</p> 
-    <input type="checkbox" id="requestcheckbox" onclick="proccessed()">
-    <p id="requested" style="display:none"> Requested </p>
-</div> 
+    <div class = "jumbotron">
+        <h1 align = "center"> <b> The University of Chubb </b> </h1>
+    </div>
 
-</body>
-<script src="../checkbox.js"></script>
-</html>
+    <div class = "container">
+        <form>
+            Login Name: <br>
+            <input type="text" name="loginname"> <br>
+
+            Password: <br>
+            <input type="password" name="password"> <br><br>
+		</form>
+		
+		<form action = "./request.html">
+            <input type="submit" value="Login">
+		</form>
+
+
+    </div>
+    </body>
