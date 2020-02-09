@@ -1,33 +1,28 @@
 function requestPass(){
-  var userSchool = "Simon Fraser University";
+  var userSchool = "uoc";
+
+  document.getElementById('school').value = userSchool;
+  document.getElementById('submitButton').click();
+
+  //this is when page transition happens
+
+
   var id = "nickchubb";
   var password = "insertpasswordhere";
-  //var renewed = nick got it
 
-  var xmlHttp = new XMLHttpRequest();
-  var schoolUrl = "./HTML/mainpage.html";
-  var loginUrl = "./HTML/chubblogin.html";
-  var renewUrl = "./HTML/request.html";
+  document.addEventListener("load", ready);
 
-  xmlHttp.open( "GET", schoolUrl, false ); // false for synchronous request
-  xmlHttp.send( null );
+  document.getElementById('login').value = id;
+  document.getElementById('password').value = password;
+  document.getElementById('submitLogin').click();
 
-  document.getElementById('dropdown').value = userSchool;
-  //press button
-  //goto next http
 
-  document.getElementById('usernameField').value = id;
-  document.getElementById('passwordField').value = password;
+  //document.getElementById("myFrame").addEventListener("load", myFunction);
 
-  //check if login is correct
-  //if fail, ask for new username password
 
-  //press continue button
-  //goto next http
+  //this is when page transition happens again
 
-  document.getElementById('checkBox').value = true;
 
-  //wait until request finish
-  //close connection (if needed?)
+
 
 }
