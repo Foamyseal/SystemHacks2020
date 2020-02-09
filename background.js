@@ -37,6 +37,12 @@ function check(day_today)  {
 
         //do stuff
 
+
+        var popup = window.open("http://www.google.com/");
+
+        
+
+
         chrome.storage.local.set({ "renewed": true }, function(){
         });
 
